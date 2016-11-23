@@ -19,10 +19,10 @@
   background-color: $white-smoke;
 }
 
-.site-main {
+//.site-main {}
+.module {
   @include section_padding(2em);
 }
-
 .site-footer {
   @include section_padding(1em);
   border-top: 1px solid #eee;
@@ -37,3 +37,22 @@ h4, h5, h6 {
   line-height: 1; // Set line-height smaller on larger fonts
   color: #006699;
 }
+a {color: #8ec1cd;}
+p {font-family: Gotham SSm,sans-serif;}
+
+
+// ------------------------------------------------------------
+// Hero Image responsive
+// ------------------------------------------------------------
+.hero-bg {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  position: relative;
+  display: block;
+  overflow: hidden;
+//max-height: 600px;
+}
+
+
