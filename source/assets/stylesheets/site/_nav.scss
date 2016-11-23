@@ -36,7 +36,7 @@
     height: 0;
     overflow: hidden;
     float:right;
-
+        z-index: 999;
     @include media($large-screen) {
       height: auto;
     }
