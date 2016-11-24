@@ -108,4 +108,18 @@ p {font-family: Gotham SSm,sans-serif;}
   }
 }
 
-////
+// ------------------------------------------------------------
+// Gallery page  responsive
+// ------------------------------------------------------------
+.popup-gallery {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @include media($large-screen) {
+  img {
+    width: 260px;
+    height: auto;
+  }
+}
+}
