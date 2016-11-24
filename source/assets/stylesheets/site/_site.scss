@@ -65,4 +65,47 @@ p {font-family: Gotham SSm,sans-serif;}
   text-align: center;
 }
 
-//// panel
+// ------------------------------------------------------------
+// Bad page  responsive
+// ------------------------------------------------------------
+.band-wrapper {
+  @include outer-container;
+  img {
+    width: 550px;
+    height: auto;
+  }
+  @include media($medium-screen) {
+    .panel-band {
+      @include span-columns(6);
+    }
+  }
+  .panel-band-content {
+    @include media($medium-screen) {
+      @include span-columns(6);
+      font-size: 30px;
+      strong {
+      font-weight: 600;
+      line-height: 34px;
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------
+// Music page  responsive
+// ------------------------------------------------------------
+.music-wrapper {
+  @include outer-container;
+  @include media($large-screen) {
+    .section-misic-r {
+      @include span-columns(6);
+    }
+  }
+  .section-misic-l {
+    @include media($large-screen) {
+      @include span-columns(6);
+    }
+  }
+}
+
+////
