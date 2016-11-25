@@ -146,106 +146,55 @@ p {font-family: Gotham SSm,sans-serif;}
 
 
 /////////////////// hover image column
+.hover-tile-outer {
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: 40em !default;
+  $hover-tile-height: 10em;
+  $base-spacing: 1.5em;
 
-// variables
-$anim-speed: 0.3s;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+  background-color: beige;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid $base-border-color;
+  cursor: pointer;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
 
-// main styles
-.tiles {
-  width: 100%;
-  font-size: 0;
-  text-align: center;
+  @include media($medium-screen) {
+    width: 40%;
+  }
 
-  .tile {
-    display: inline-block;
-    margin: 10px;
-    text-align: left;
-    opacity: .99;
+  .hover-tile-container {
+    height: $hover-tile-height;
     overflow: hidden;
-    position: relative;
-    border-radius: 3px;
-    box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
+  }
 
-    &:before {
-      content: '';
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0) 0%,
-        rgba(0,0,0,0.7) 100%
-      );
-      width: 100%;
-      height: 50%;
-      opacity: 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 2;
-      transition-property: top, opacity;
-      transition-duration: $anim-speed;
+  .hover-tile-container:hover > .hover-tile {
+    transform: translate(0, -100%);
+  }
+
+  .hover-tile {
+    background: inherit;
+    color: white;
+    height: inherit;
+    overflow: hidden;
+    padding: $base-spacing;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(#000, 0.5);
+
+    p {
+      color: transparentize(#fff, 0.3);
+      line-height: $base-line-height;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-
-    .details {
-      font-size: 16px;
-      padding: 20px;
-      color: #fff;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 3;
-
-      span {
-        display: block;
-        opacity: 0;
-        position: relative;
-        top: 100px;
-        transition-property: top, opacity;
-        transition-duration: $anim-speed;
-        transition-delay: 0s;
-      }
-
-      .title {
-        line-height: 1;
-        font-weight: 600;
-        font-size: 18px;
-      }
-
-      .info {
-        line-height: 1.2;
-        margin-top: 5px;
-        font-size: 12px;
-      }
-    }
-
-    &:focus,
-    &:hover {
-
-      &:before,
-      span {
-        opacity: 1;
-      }
-
-      &:before {
-        top: 50%;
-      }
-
-      span {
-        top: 0;
-      }
-
-      .title {
-        transition-delay: 0.15s;
-      }
-
-      .info {
-        transition-delay: 0.25s;
-      }
+    h4 {
+      margin: 0 0 0.5em 0;
     }
   }
 }
+
