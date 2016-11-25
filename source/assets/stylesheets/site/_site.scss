@@ -123,3 +123,19 @@ p {font-family: Gotham SSm,sans-serif;}
   }
 }
 }
+
+// remove bg color on the modal
+.mfp-arrow-left:hover, .mfp-arrow-right:hover, .mfp-close:hover {
+  /* box-shadow: inset 0 1px 0 0 #628cc8; */
+  /* cursor: pointer; */
+  background:rgba(0,0,0,0.0) !important;
+  background-image:none !important;
+  box-shadow: none !important;
+}
+.mfp-arrow-left:hover, .mfp-arrow-right:hover, .mfp-close:hover {
+  color: #ff9933;
+}
+.mfp-arrow-left:active, .mfp-arrow-right:active, .mfp-close:active {
+  border: none !important;
+  box-shadow: none !important;
+}
