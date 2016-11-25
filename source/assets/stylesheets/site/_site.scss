@@ -31,7 +31,7 @@
 // ------------------------------------------------------------
 // Typography
 // ------------------------------------------------------------
-
+h1 {color: #8ec1cd;}
 h1, h2, h3,
 h4, h5, h6 {
   line-height: 1; // Set line-height smaller on larger fonts
@@ -69,6 +69,7 @@ p {font-family: Gotham SSm,sans-serif;}
 // Bad page  responsive
 // ------------------------------------------------------------
 .band-wrapper {
+  h1 {color: #8ec1cd;}
   @include outer-container;
   img {
     width: 550px;
