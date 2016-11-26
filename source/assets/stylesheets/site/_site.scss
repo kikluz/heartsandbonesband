@@ -151,7 +151,7 @@ p {font-family: Gotham SSm,sans-serif;}
   padding-top: 250px;
 }
 
-.image{
+.image {
   display: inline-block;
   background-image: url("../images/group1.jpg");
   background-size: cover;
@@ -159,6 +159,7 @@ p {font-family: Gotham SSm,sans-serif;}
   width:100%;
   height: 600px;
 }
+
 .image:before{
   content:"";
   display: block;
@@ -167,19 +168,13 @@ p {font-family: Gotham SSm,sans-serif;}
   position: absolute;
   background: rgba(25, 29, 34, 0.75);
 }
+
 .text-over-image{
-  color: #fff;
   text-align: center;
-  font: 400 2.875em/1.30435 "brandon-grotesque", sans-serif;
-  font-style: normal;
-  font-variant-ligatures: normal;
-  font-variant-caps: normal;
-  font-variant-numeric: normal;
   font-weight: 400;
   font-stretch: normal;
   font-size: 2.875em;
   line-height: 1.30435;
-  font-family: brandon-grotesque, sans-serif;
   letter-spacing: 0.075em;
   min-height: 1.46em;
   text-transform: uppercase;
