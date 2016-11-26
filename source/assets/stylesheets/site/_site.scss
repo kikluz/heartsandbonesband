@@ -155,12 +155,11 @@ p {font-family: Gotham SSm,sans-serif;}
 }
 .cards {
   padding-right: 10px;
-
+  @include media($medium-screen) {
     img {
       max-width: 100%;
       height: auto;
       vertical-align: middle;}
-      @include media($medium-screen) {
       max-width: 25%;
       float: left;
       background-color: white;
