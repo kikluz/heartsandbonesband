@@ -232,5 +232,23 @@ height: 300px
   }
 }
 // ------------------------------------------------------------
-//
+//  Contact Page
 // ------------------------------------------------------------
+.contact-section {
+
+    @include outer-container;
+    .contact-phone {
+      padding: 1em;
+      background: #eeeeee;
+      @include media($medium-screen) {
+      @include span-columns(6);
+    }
+  }
+    .contact-email {
+      padding: 1em;
+      background: #eeeeee;
+      @include media($medium-screen) {
+      @include span-columns(6);
+    }
+  }
+}
