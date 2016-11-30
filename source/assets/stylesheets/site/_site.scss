@@ -51,11 +51,12 @@ p {font-family: Gotham SSm,sans-serif;}
   img {
     width: 100%;
     height: auto;
+      -webkit-filter: grayscale(0.3)
   }
   position: relative;
   display: block;
   overflow: hidden;
-//max-height: 600px;
+  max-height: 600px;
 }
 
 .panel-welcome {
