@@ -107,7 +107,7 @@
     font-size: 2em;
     line-height: 0;
     display: block;
-    color: $white;
+    color: #485961;
   }
 
   .icon {
@@ -134,10 +134,10 @@
       display: block;
       padding:1em;
       text-align: center;
-      color: $blue;
+      color: #485961;
       border-bottom: 1px solid $white-smoke;
       @include media($large-screen) {
-        color: #002B36;
+
       }
     }
 
