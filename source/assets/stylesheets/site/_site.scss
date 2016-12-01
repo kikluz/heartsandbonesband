@@ -96,6 +96,9 @@ p {font-family: Gotham SSm,sans-serif;}
       @include span-columns(6);
       font-size: 30px;
       line-height: 1.5em;
+      span {
+        font-size: 20px;
+      }
       strong {
       font-weight: 600;
       line-height: 34px;
