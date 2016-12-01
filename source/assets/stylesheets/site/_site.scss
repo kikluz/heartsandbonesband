@@ -59,6 +59,9 @@ p {font-family: Gotham SSm,sans-serif;}
 }
 
 .panel-welcome {
+   @include media($medium-screen) {
+  padding:2em;
+}
   h1 {
     color: #485961;
     font-size: 42px;
