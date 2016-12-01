@@ -92,7 +92,7 @@ p {font-family: Gotham SSm,sans-serif;}
     }
   }
   .panel-band-content {
-    @include media($medium-screen) {
+    @include media($large-screen) {
       @include span-columns(6);
       font-size: 30px;
       line-height: 1.5em;
