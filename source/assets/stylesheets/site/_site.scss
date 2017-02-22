@@ -32,7 +32,10 @@
 // ------------------------------------------------------------
 // Typography
 // ------------------------------------------------------------
-h1 {color: #485961;;}
+h1 {
+  color: #485961;
+  font-size: 2em;
+}
 h1, h2, h3,
 h4, h5, h6 {
   line-height: 1; // Set line-height smaller on larger fonts
@@ -65,7 +68,7 @@ p {font-family: Gotham SSm,sans-serif;}
 }
   h1 {
     color: #485961;
-    font-size: 42px;
+
   }
   width: 100%;
   padding-bottom: 16px;
@@ -271,6 +274,25 @@ height: 300px
 }
 
 
-/// footer
+// ------------------------------------------------------------
+// Music page
+// ------------------------------------------------------------
+.music-section {
+  @include outer-container;
+  h3 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+  }
+  .music-panel-r {
+    @include media($medium-screen) {
+      @include span-columns(6);
+    }
+  }
+  .music-panel-l {
+    @include media($medium-screen) {
+      @include span-columns(6);
+    }
+  }
+  }
 
 
