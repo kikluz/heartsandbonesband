@@ -297,8 +297,7 @@ height: 300px
 
    #aPlayer > audio { width: 100% }
         /* Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
+@include media($large-screen) {
        /* HIDE DOWNLOAD AUDIO BUTTON */
      #aPlayer {
            overflow: hidden;width: 390px;
@@ -308,7 +307,7 @@ height: 300px
 }
 
 /* Chrome 22-28 */
-@media screen and(-webkit-min-device-pixel-ratio:0) {
+@include media($large-screen) {
 
       #aPlayer {
            overflow: hidden;width: 390px;
