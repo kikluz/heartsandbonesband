@@ -38,8 +38,8 @@ h1 {
 }
 h1, h2, h3,
 h4, h5, h6 {
-  line-height: 1; // Set line-height smaller on larger fonts
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+line-height: 1; // Set line-height smaller on larger fonts
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a {color: #485961;}
 p {font-family: Gotham SSm,sans-serif;}
@@ -63,9 +63,9 @@ p {font-family: Gotham SSm,sans-serif;}
 }
 
 .panel-welcome {
-   @include media($medium-screen) {
-  padding:2em;
-}
+  @include media($medium-screen) {
+    padding:2em;
+  }
   h1 {
     color: #485961;
 
@@ -104,8 +104,8 @@ p {font-family: Gotham SSm,sans-serif;}
         font-size: 20px;
       }
       strong {
-      font-weight: 600;
-      line-height: 34px;
+        font-weight: 600;
+        line-height: 34px;
       }
     }
   }
@@ -137,11 +137,11 @@ p {font-family: Gotham SSm,sans-serif;}
     height: auto;
   }
   @include media($large-screen) {
-  img {
-    width: 260px;
-    height: auto;
+    img {
+      width: 260px;
+      height: auto;
+    }
   }
-}
 }
 
 // remove bg color on the modal
@@ -162,7 +162,7 @@ p {font-family: Gotham SSm,sans-serif;}
 // ------------------------------------------------------------
 
 .hero {
-background-color: #485961;
+  background-color: #485961;
 //background: url('../images/group1.jpg'), no-repeat center center;
 position: relative;
 background-position: 0px 0px;
@@ -184,13 +184,13 @@ width: 100%;
     color: $white-smoke;
     letter-spacing: 0.3em;
   }
-display: table-cell;
-text-align: center;
-vertical-align: middle;
- @include media($large-screen) {
-  height: 300px;
- }
-height: 300px
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  @include media($large-screen) {
+    height: 300px;
+  }
+  height: 300px
 }
 // ------------------------------------------------------------
 // Band page
@@ -232,14 +232,14 @@ height: 300px
     background-repeat: no-repeat;
     background-size: cover;
     filter: contrast(70%);
-    //filter: saturate(180%);
-    overflow: hidden;
-    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
-  &::before {
-    content: "";
-    display: block;
-  padding-top: 10px; // 16:9 aspect ratio
-  }
+//filter: saturate(180%);
+overflow: hidden;
+transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+&::before {
+  content: "";
+  display: block;
+padding-top: 10px; // 16:9 aspect ratio
+}
 }
 .card-text {
   padding: 1em;
@@ -256,18 +256,18 @@ height: 300px
 // ------------------------------------------------------------
 .contact-section {
 
-    @include outer-container;
-    .contact-phone {
-      padding: 1em;
-      background: #eeeeee;
-      @include media($medium-screen) {
+  @include outer-container;
+  .contact-phone {
+    padding: 1em;
+    background: #eeeeee;
+    @include media($medium-screen) {
       @include span-columns(6);
     }
   }
-    .contact-email {
-      padding: 1em;
-      background: #eeeeee;
-      @include media($medium-screen) {
+  .contact-email {
+    padding: 1em;
+    background: #eeeeee;
+    @include media($medium-screen) {
       @include span-columns(6);
     }
   }
@@ -293,27 +293,118 @@ height: 300px
       @include span-columns(6);
     }
   }
+}
+
+#aPlayer > audio { width: 100% }
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+and (min-resolution:.001dpcm) {
+  /* HIDE DOWNLOAD AUDIO BUTTON */
+  #aPlayer {
+    overflow: hidden;width: 390px;
   }
 
-  #aPlayer > audio { width: 100% }
-  /* Chrome 29+ */
-  @include media($large-screen) {
-    /* HIDE DOWNLOAD AUDIO BUTTON */
-    #aPlayer {
-      overflow: hidden;width: 390px;
+  #aPlayer > audio { width: 420px; }
+}
+
+/* Chrome 22-28 */
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+
+  #aPlayer {
+    overflow: hidden;width: 390px;
+  }
+
+  #aPlayer > audio { width: 420px; }
+}
+
+
+
+// this is a demo
+
+
+
+
+//General classes
+.screen-reader-text {
+  /* Reusable, toolbox kind of class */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.disabled {
+  color: #666;
+  cursor: default;
+}
+
+.show {
+  display: inline-block !important;
+}
+
+//General CSS
+
+    .player {
+      height: 60px;
+      margin: 0;
+      position: relative;
+      width: 400px;
+      @include media(tablet) {
+        width: 470px;
+      }
+      @include media(mediumDesktop) {
+        width: 470px;
+      }
+      @include media(largeDesktop) {
+        width: 470px;
+      }
+      .large-toggle-btn {
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        float: left;
+        font-size: 1.5em;
+        height: 50px;
+        margin: 0 10px 0 0;
+        overflow: hidden;
+        padding: 5px 0 0 0;
+        position: relative;
+        text-align: center;
+        vertical-align: bottom;
+        width: 54px;
+        .large-play-btn {
+          &:before {
+            content: "\f04b";
+            font: 1.5em/1.75 "FontAwesome";
+          }
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          top: -14%;
+        }
+        .large-pause-btn {
+          &:before {
+            content: "\f04c";
+            font: 1.5em/1.75 "FontAwesome";
+          }
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          top: -13%;
+        }
+} //end .play-box
+  .info-box {
+    bottom: 10px;
+    left: 65px;
+    position: absolute;
+    top: 15px;
+    .track-info-box {
+      float: left;
+      font-size: 12px;
+      margin: 0 0 6px 0;
+      visibility: hidden;
+      width: 400px;
+      .track-title-text {
+        display: inline-block;
+      }
     }
-
-    #aPlayer > audio { width: 420px; }
   }
-
-  /* Chrome 22-28 */
-  @include media($large-screen) {
-
-    #aPlayer {
-      overflow: hidden;width: 390px;
-    }
-
-    #aPlayer > audio { width: 420px; }
-  }
-
-
+}
