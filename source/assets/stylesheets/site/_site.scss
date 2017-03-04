@@ -278,6 +278,7 @@ height: 300px
 // Music page
 // ------------------------------------------------------------
 .music-section {
+  width: 100%;
   @include outer-container;
   h3 {
     border-bottom: 1px solid #333;
@@ -317,4 +318,8 @@ height: 300px
     #aPlayer > audio { width: 420px; }
 }
 
+
+video {
+    width: 100%;
+}
 
