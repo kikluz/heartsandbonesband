@@ -10,7 +10,7 @@ gem 'middleman-pry'
 gem 'bitters'
 gem 'middleman-syntax'
 gem "middleman-deploy"
-
+gem 'middleman-blog'
 # Font awesome
 gem 'font-awesome-middleman'
 
