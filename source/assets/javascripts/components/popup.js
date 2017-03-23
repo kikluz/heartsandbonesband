@@ -1,3 +1,5 @@
+/* http://dimsemenov.com/plugins/magnific-popup/ */
+
 $(document).ready(function() {
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
@@ -12,7 +14,7 @@ $(document).ready(function() {
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
       titleSrc: function(item) {
-        return item.el.attr('title') + '<small></small>';
+        return item.el.attr('title') + '<small>by heartsandbonesband</small>';
       }
     }
   });
